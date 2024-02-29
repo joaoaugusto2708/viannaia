@@ -36,16 +36,21 @@ inserir(valor){
                         return novoNo;
                     } 
                     noAtual = noAtual.filhoE;
-                }else{
+                }else if(valor > noAtual.valor){
                     if(noAtual.filhoD == null){
                         noAtual.filhoD = novoNo;
                         return novoNo;
                     }
+                    noAtual = noAtual.filhoD;
+                }else{
+                    return noAtual;
                 }
             }
          }
 
     }
+
+    //VAI CURINTIA
  
         
 
